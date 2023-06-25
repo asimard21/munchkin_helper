@@ -1,0 +1,184 @@
+:root {
+  --fs-400: 1rem;
+  --fs-450: 1.5rem;
+  --fs-500: 2rem;
+  --fs-600: 3rem;
+  --fs-800: 5rem;
+
+  --main-ff: 'MedievalSharp', cursive;
+
+  --light-clr: #ECF39E;
+  --dark-clr: #4F772D;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-ff);
+  box-sizing: border-box;
+
+}
+
+.btn {
+  all: unset;
+}
+
+.main-display {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #132A13 0%, #31572C 31.77%, #31572C 68.75%, #132A13 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-display h1 {
+  text-align: center;
+  font-size: var(--fs-800);
+  color: white;
+  font-weight: 300;
+  margin: 0;
+}
+
+
+.main-display h3 {
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  font-size: var(--fs-500)
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100%;
+  margin: 1rem;
+}
+
+.selector-btn {
+  background-color: var(--light-clr);
+  width: 33%;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.selector-card {
+  width: 15%;
+  height: fit-content;
+  background-color: var(--dark-clr);
+  border-radius: 1rem;
+  overflow: hidden;
+
+}
+
+.selector-card h1 {
+  font-size: var(--fs-500);
+  background-color: var(--light-clr);
+  padding: 0.5rem;
+  color: black;
+}
+
+.selector-card .reset {
+  background-color: var(--light-clr);
+  margin: 1rem 0.5rem;
+  font-size: var(--fs-450);
+  padding: 0.5rem;
+  border-radius: 1rem;
+
+  
+}
+
+.counters-container {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.counter-action {
+  display:flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.counter-action h2 {
+  font-size: var(--fs-450);
+  font-weight: 500;
+}
+.counter-action button {
+  font-size: var(--fs-450);
+  background-color: var(--light-clr);
+  border-radius: 100%;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+}
+
+.icons-container {
+  display: flex;
+  min-height: 1.5rem;
+  min-width: 1.5rem;
+
+}
+
+
+.counter-icon {
+  width: 1.5rem;
+  aspect-ratio: 1;
+}
+
+
+@media screen and ( max-width: 900px) {
+  .selector-card {
+    min-width: 60%;
+  }
+
+  .main-display h1 {
+    padding: 0.5rem;
+    font-size: var(--fs-500);
+  }
+
+  .main-display h3 {
+    font-size: var(--fs-400);
+  }
+
+  .cards-container {
+    min-width: 100%;
+    flex-grow: 1;
+  }
+
+  .result {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .icons-container {
+    min-width: 1.2rem;
+    min-height: 1.2rem;
+  }
+
+  .counter-icon {
+    width: 1.2rem;
+    aspect-ratio: 1;
+  }
+
+
+
+}
