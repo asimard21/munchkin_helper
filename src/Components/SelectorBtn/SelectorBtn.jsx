@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export const SelectorBtn = (props) => {
     
@@ -14,6 +15,6 @@ export const SelectorBtn = (props) => {
     }
 
     return (
-        <button className='selector-btn btn' onClick={handleClick}>{props.text}</button>
+        <motion.button className='selector-btn btn' onClick={handleClick} whileTap={{scale:1.2}}>{props.text}</motion.button>
     )
 }

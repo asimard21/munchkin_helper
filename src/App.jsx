@@ -50,13 +50,13 @@ function App() {
   const smallScreenDisplayCounters = () => {
     if (playerDisplay) {
       return (
-          <motion.div key='player-card'initial={{x: -100}} animate={{x: 0}} exit={{x:-100}}className='cards-container'>
+          <motion.div key='player-card' initial={{x: -300, opacity: 0}} animate={{x: 0, opacity: 1}} exit={{x:-300, opacity:0}} transition={{duration: 0.2}} className='cards-container'>
             <SelectorCard cardName='player' counters={[playerSwords, setPlayerSwords, playerShields, setPlayerShields]}/>
           </motion.div>   
       ) 
     } else if (monsterDisplay) {
       return (
-          <motion.div key='monster-card' className='cards-container' initial={{x: 100}} animate={{x: 0}} >
+          <motion.div key='monster-card' className='cards-container' initial={{x:300, opacity: 0}} animate={{x: 0, opacity: 1}} exit={{x:300, opacity:0}} transition={{duration: 0.2}}>
             <SelectorCard cardName='monster' counters={[monsterSwords, setMonsterSwords, monsterShields, setMonsterShields]} />
           </motion.div>
         
@@ -83,7 +83,9 @@ function App() {
         <h1 className='app-title'>Munckin Dungeon</h1>
         <h3 className='app-subtitle'>Battle helper</h3>
         { inWidth < 700 && smallScreenDisplayBtn() }
+        <AnimatePresence mode={'wait'}>
         { inWidth < 700 && smallScreenDisplayCounters()}
+        </AnimatePresence>
         { inWidth < 700 && smallScreenDisplayResults()}
        
         { inWidth > 700 &&

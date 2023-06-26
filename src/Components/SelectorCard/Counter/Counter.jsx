@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 
 export const Counter = (props) => {
 
@@ -19,8 +19,8 @@ export const Counter = (props) => {
         <div className='counter-container'>
             <div className='counter-action'>
                 <h2>{props.counterName}</h2>
-                <button className='btn' onClick={addToCounter}>+</button>
-                <button className='btn' onClick={subToCounter}>-</button>
+                <motion.button className='btn' onClick={addToCounter} whileTap={{scale:1.2}}>+</motion.button>
+                <motion.button className='btn' onClick={subToCounter} whileTap={{scale:1.2}}>-</motion.button>
             </div>
             
             
