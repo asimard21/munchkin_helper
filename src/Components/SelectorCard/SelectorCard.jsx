@@ -23,15 +23,9 @@ export const SelectorCard = (props) => {
     const handleReset = () => {
         swordsSetter(0);
         shieldsSetter(0);
-        setReset(true)
     }
 
-    const DisplayShield = () => {
-        
-                
-        
-    }
-
+   
     return (
         <>
             <div className='selector-card'>
@@ -58,7 +52,7 @@ export const SelectorCard = (props) => {
     
                     
                 </div>
-                <button className='btn reset' onClick={handleReset}>Reset</button>
+                <motion.button className='btn reset' onClick={handleReset} whileTap={{scale:1.2}}>Reset</motion.button>
             </div>
         </>
     )
