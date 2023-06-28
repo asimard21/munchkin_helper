@@ -21,6 +21,7 @@ export const Counter = (props) => {
                 <h2>{props.counterName}</h2>
                 <motion.button className='btn' onClick={addToCounter} whileTap={{scale:1.2}}>+</motion.button>
                 <motion.button className='btn' onClick={subToCounter} whileTap={{scale:1.2}}>-</motion.button>
+                <h2 className='counter-num'>{props.counterVar > 0 && props.counterVar}</h2>
             </div>
             
             

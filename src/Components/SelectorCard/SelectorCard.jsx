@@ -34,18 +34,17 @@ export const SelectorCard = (props) => {
                     <Counter counterName='attack' counterSetter={swordsSetter} counterVar={swordsCounter}/>
                     <div className='icons-container'>
                         <AnimatePresence>
-                        {displayIcon(swordsCounter).map((counter) => {
-                            return <motion.img initial={{x: 10}} animate={{x: 0}} exit={{scale:1.2}} src={Sword} className='counter-icon' key={counter} />
-                        })}
+                            {displayIcon(swordsCounter).map((counter) => {
+                                return <motion.img initial={{x: 10}} animate={{x: 0}} exit={{scale:1.2}}  src={Sword} className='counter-icon' key={counter} />
+                            })}
                         </AnimatePresence> 
                     </div>
                     <Counter counterName='shield' counterSetter={shieldsSetter} counterVar={shieldsCounter}/>
-                        
                     <div className='icons-container'>
                         <AnimatePresence>
-                        {displayIcon(shieldsCounter).map((counter) => {
-                            return <motion.img initial={{x: 10}} animate={{x: 0}} exit={{scale:1.2}}src={Shield} className='counter-icon' key={counter} />
-                        })}
+                            {displayIcon(shieldsCounter).map((counter) => {
+                                return <motion.img initial={{x: 10}} animate={{x: 0}} exit={{scale:1.2}}src={Shield} className='counter-icon' key={counter} />
+                            })}
                         </AnimatePresence>
                         
                     </div>

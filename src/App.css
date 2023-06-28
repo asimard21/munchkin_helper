@@ -82,6 +82,7 @@
   background-color: var(--dark-clr);
   border-radius: 1rem;
   overflow: hidden;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
 }
 
@@ -113,7 +114,7 @@
 .counter-action {
   display:flex;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
 }
 
 .counter-action h2 {
@@ -127,6 +128,10 @@
   width: 1.5rem;
   height: 1.5rem;
   text-align: center;
+}
+
+.counter-num {
+  min-width: 2rem;
 }
 
 .icons-container {
